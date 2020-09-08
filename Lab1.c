@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <conio.h>
-double fun(int a,int b,double c,int Xbegin,int Xend,int dX){
+double someMathOperations(int a,int b,double c,int Xbegin,int Xend){
 	double preRes;
 	if((Xbegin+10<0)&&(b!=0)){
 		preRes=a*pow(Xbegin,2)-c*Xbegin+b;
@@ -23,7 +23,7 @@ int main() {
 	printf("\tXend:");scanf("%d",&Xend);
 	printf("\tdX:");scanf("%d",&dX);
 	for(Xbegin;Xbegin<=Xend;Xbegin+=dX){
-		res=fun(a,b,c,Xbegin,Xend,dX);
+		res=someMathOperations(a,b,c,Xbegin,Xend);
 			if(((long)floor(a)||(long)floor(b))&(!((long)floor(a)||(long)floor(c)))){
 				printf("x=%d\tF=%.2f\n",Xbegin,res);
 			}else{
