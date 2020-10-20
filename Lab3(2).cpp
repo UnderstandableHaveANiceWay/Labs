@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <iostream>
 using namespace std;
 int main(int argc,char* argv[]){
@@ -11,7 +12,8 @@ int main(int argc,char* argv[]){
 
     cin>>m;
 
-    int A[n][m],B[n][m];
+    int A[n][m];
+    float B[n][m];
 
     cout<<"Введите массив\n";
 
@@ -22,13 +24,8 @@ int main(int argc,char* argv[]){
     }
     for(int i=0;i<n;++i){
         for(int j=0;j<m;++j){
-           cout<<A[i][j]<<" ";
-        }
-        cout<<"\n";
-    }
-    for(int i=0;i<n;++i){
-        for(int j=0;j<m;++j){
-            int k=0,a=0,b=0,c=0,d=0;
+            int k=0;
+            float a=0,b=0,c=0,d=0;
             if((i-1<n)&(i-1>=0)){
                 a=A[i-1][j];
                 ++k;
@@ -49,8 +46,18 @@ int main(int argc,char* argv[]){
         }
     }
     for(int i=0;i<n;++i){
+
         for(int j=0;j<m;++j){
-           cout<<B[i][j]<<" ";
+
+           cout<<A[i][j]<<" ";
+           
+        }
+        cout<<"\n";
+    }
+    cout<<"Сглаженный массив:\n";
+    for(int i=0;i<n;++i){
+        for(int j=0;j<m;++j){
+           printf("%.2f ",B[i][j]);
         }
         cout<<"\n";
     }
